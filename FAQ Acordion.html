@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3eafe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .faq-container {
+            max-width: 600px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .faq-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            color: #4a148c;
+        }
+
+        .faq-header::before {
+            content: '+';
+            font-size: 30px;
+            margin-right: 10px;
+            color: #7e57c2;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #4a148c;
+            font-weight: bold;
+            background-color: #f3f0fc;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .faq-question:hover, .faq-question:focus {
+            background-color: #e1d8f7;
+            color: #311b92;
+        }
+
+        .faq-question:focus {
+            outline: 2px solid #7e57c2;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 15px;
+            color: #6a1b9a;
+            font-size: 16px;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer.visible {
+            max-height: 200px;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .faq-container {
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container" aria-label="Frequently Asked Questions">
+        <div class="faq-header">FAQs</div>
+        <div class="faq-item">
+            <div tabindex="0" class="faq-question" aria-expanded="false">What is Frontend Mentor, and how will it help me?<span>+</span></div>
+            <div class="faq-answer" aria-hidden="true">Frontend Mentor offers realistic coding challenges to help developers improve their frontend skills with projects in HTML, CSS, and JavaScript. It’s suitable for all levels and ideal for portfolio building.</div>
+        </div>
+        <div class="faq-item">
+            <div tabindex="0" class="faq-question" aria-expanded="false">Is Frontend Mentor free?<span>+</span></div>
+            <div class="faq-answer" aria-hidden="true">Yes, Frontend Mentor offers both free and premium plans to cater to developers of all levels.</div>
+        </div>
+        <div class="faq-item">
+            <div tabindex="0" class="faq-question" aria-expanded="false">Can I use Frontend Mentor projects in my portfolio?<span>+</span></div>
+            <div class="faq-answer" aria-hidden="true">Yes, you can use Frontend Mentor projects in your portfolio to showcase your coding skills.</div>
+        </div>
+        <div class="faq-item">
+            <div tabindex="0" class="faq-question" aria-expanded="false">How can I get help if I’m stuck on a challenge?<span>+</span></div>
+            <div class="faq-answer" aria-hidden="true">You can get help by joining the Frontend Mentor community forum or connecting with developers on social platforms.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', toggleFAQ);
+            question.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleFAQ.call(question);
+                }
+            });
+
+            function toggleFAQ() {
+                const currentAnswer = this.nextElementSibling;
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                document.querySelectorAll('.faq-answer').forEach(answer => {
+                    answer.classList.remove('visible');
+                    answer.previousElementSibling.setAttribute('aria-expanded', 'false');
+                });
+
+                if (!isExpanded) {
+                    currentAnswer.classList.add('visible');
+                    this.setAttribute('aria-expanded', 'true');
+                } else {
+                    currentAnswer.classList.remove('visible');
+                    this.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
