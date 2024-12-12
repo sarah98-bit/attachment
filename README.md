@@ -18,7 +18,7 @@ The FAQ Accordion Component is a responsive and accessible accordion feature for
 ## Installation and Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+ (https://github.com/sarah98-bit/attachment.git)
    ```
 2. Navigate to the project directory:
    ```bash
@@ -53,6 +53,4 @@ faq-accordion/
 - Incorporating themes or dark mode for better user preferences.
 - Extending functionality to allow multiple answers to be visible simultaneously if needed.
 
-## License
-This project is licensed under the MIT License.
 
