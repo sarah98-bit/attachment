@@ -1,3 +1,46 @@
+# Unique Character Count
+
+This project includes a Python function that counts the frequency of unique characters in a given string. The function is optimized for large inputs.
+
+## Features
+
+- **Accurate Character Counting**: Handles both lowercase and uppercase letters.
+- **Optimized for Performance**: Processes large strings efficiently using a dictionary.
+- **Simple Input/Output**: Easy-to-use function that accepts a string and returns a dictionary of character frequencies.
+
+## Example
+
+### Input
+```python
+"characteristics"
+```
+
+### Output
+```python
+ {'c': 3, 'h': 1, 'a': 2, 'r': 2, 't': 2, 'e': 1, 'i': 2, 's': 2}
+```
+
+## Big-O Analysis
+
+- **Time Complexity**: `O(n)`, where `n` is the length of the input string. Each character is processed once.
+- **Space Complexity**: `O(u)`, where `u` is the number of unique characters in the string.
+
+## Usage Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repository/unique-character-count.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd unique-character-count
+   ```
+3. Run the Python script:
+   ```bash
+   python unique_character_count.py
+   ```
+
+
 # FAQ Accordion Component
 
 ## Project Description
@@ -18,13 +61,13 @@ The FAQ Accordion Component is a responsive and accessible accordion feature for
 ## Installation and Setup
 1. Clone the repository:
    ```bash
- (https://github.com/sarah98-bit/attachment.git)
+ 
    ```
 2. Navigate to the project directory:
    ```bash
    cd faq-accordion
    ```
-3. Open the `index.html` file in your preferred browser.
+3. Open the `FAQ Accordion.html` file in your preferred browser.
 
 ## Usage
 1. Click on a question to view the corresponding answer.
