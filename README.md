@@ -76,7 +76,7 @@ The FAQ Accordion Component is a responsive and accessible accordion feature for
 ## File Structure
 ```
 faq-accordion/
-├── index.html       # Main HTML file
+├── FAQ Acordion.html       # Main HTML file
 ├── styles.css       # CSS styles for layout and design
 ├── script.js        # JavaScript for functionality
 ```
