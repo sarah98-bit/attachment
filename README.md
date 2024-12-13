@@ -29,7 +29,7 @@ This project includes a Python function that counts the frequency of unique char
 
 1. Clone the repository:
    ```bash
-   https://github.com/your-repository/unique-character-count.git
+   https://github.com/sarah98-bit/attachment.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -61,7 +61,7 @@ The FAQ Accordion Component is a responsive and accessible accordion feature for
 ## Installation and Setup
 1. Clone the repository:
    ```bash
-    https://github.com/your-repository/unique-character-count.git
+    https://github.com/sarah98-bit/attachment.git
    ```
 2. Navigate to the project directory:
    ```bash
