@@ -111,6 +111,55 @@ This Flask API provides an endpoint for creating CHAMA groups. It accepts JSON d
 
 ---
 
+## API Documentation for CHAMA Group Creation
+
+### **Endpoint: Create a New Group**
+
+#### **Endpoint**
+- **URL**: `/groups`
+- **Method**: `POST`
+
+#### **Description**
+This endpoint allows users to create a CHAMA group. It accepts JSON data with group details and admin information, validates the input, and returns the created group details, including a unique group ID.
+
+# Flask API for CHAMA Group Creation
+
+This Flask API provides an endpoint for creating CHAMA groups. It accepts JSON data through a `POST` request, validates the input, and returns the created group details, including a unique group ID.
+
+---
+
+## Features
+- **Endpoint**: `/groups` (POST)
+- **Request Body**: JSON data containing group details and admin information.
+- **Response**: JSON response with the created group details or error messages for invalid input.
+- **Error Handling**: Handles invalid input and unexpected errors gracefully.
+- **Simulated Database**: Simulates group creation by generating a mock group ID.
+- **Logging**: Logs requests and errors for debugging purposes.
+
+---
+
+## API Documentation for CHAMA Group Creation
+
+### **Endpoint: Create a New Group**
+
+#### **Endpoint**
+- **URL**: `/groups`
+- **Method**: `POST`
+
+#### **Description**
+This endpoint allows users to create a CHAMA group. It accepts JSON data with group details and admin information, validates the input, and returns the created group details, including a unique group ID.
+
+#### **Authorisation(API keys)**
+This request is using an authorization helper from collection API documentation.
+
+#### **Request Headers**
+```json
+{
+  "Content-Type": "application/json"
+}
+```
+---
+
 ## Code Explanation
 
 ### File: `app.py`
