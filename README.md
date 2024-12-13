@@ -1,3 +1,54 @@
+# Capitalize Words Program
+
+## Description
+This is a simple Java program that accepts a string as input, capitalizes the first letter of each word in the string, and returns the modified string. It works by splitting the string into individual words, capitalizing the first letter of each word, and then reassembling the words into a single string.
+
+## Features
+- Capitalizes the first letter of each word.
+- Converts the rest of the letters in each word to lowercase.
+- Handles multiple words separated by spaces.
+
+## Example
+### Input:
+```
+"i love programming"
+```
+
+### Output:
+```
+"I Love Programming"
+```
+
+### How it works:
+1. The input string is split into words using space as the delimiter.
+2. The first letter of each word is capitalized, while the rest of the letters are converted to lowercase.
+3. The words are then joined back together with spaces, forming the final result.
+
+## Usage
+1. Clone the repository.
+```
+https://github.com/sarah98-bit/attachment
+```
+3. Open the project in your preferred Java IDE or text editor.
+```
+CapitalizeWords.java
+```
+5. Run the `CapitalizeWords` class.
+6. Modify the `input` variable with any string of your choice.
+
+### Example Run:
+```
+Input: "hello world from java" Output: "Hello World From Java"
+```
+
+## Code Explanation
+- The program uses a `StringBuilder` to build the result efficiently.
+- The string is split into an array of words using the `split(" ")` method.
+- Each word is processed: the first character is converted to uppercase, and the rest of the characters are converted to lowercase.
+- The `trim()` method is used to remove any extra spaces from the result.
+
+## Requirements
+- Java 8 or higher.
 
 # FAQ Accordion Component
 
@@ -34,7 +85,7 @@ The FAQ Accordion Component is a responsive and accessible accordion feature for
 ## File Structure
 ```
 faq-accordion/
-├── FAQ Acordion.html       # Main HTML file
+├── FAQ Accordion.html       # Main HTML file
 ├── styles.css       # CSS styles for layout and design
 ├── script.js        # JavaScript for functionality
 ```
